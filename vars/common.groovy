@@ -14,6 +14,6 @@ def call(String stageName){
      }
   else if ("${stageName}" == "deploy2UAT")
   {
-    sh "deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://3.129.218.197:8091/')], contextPath: null, war: 'target/*'"
+    deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://3.129.218.197:8091/')], contextPath: null, war: 'target/*'
 }
 }
