@@ -12,8 +12,4 @@ def call(String stageName){
      {
        sh "mvn clean deploy"
      }
-  else if ("${stageName}" == "deploy2UAT")
-  {
-    deploy adapters: [tomcat9(credentialsId: 'tomcat-credentials', path: '', url: 'http://3.129.218.197:8091/')], contextPath: null, war: 'target/*'
-}
-}
+  }
